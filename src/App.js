@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import Card from "./components/main/Card";
 import Footer from "./components/footer/Footer";
 import Slider from "./components/slider/Slider";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   //? it should return only one div. But inside it it can be lots of divs !

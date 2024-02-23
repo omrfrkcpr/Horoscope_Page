@@ -5,7 +5,6 @@
 @use "././scss/base/reset";
 //*components
 @use "././scss/components/responsive";
-
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body {
@@ -13,16 +12,16 @@ body {
   color: variables.$text-color;
   background-image: linear-gradient(
     to top,
-    variables.$purple-bg-veryDark,
-    variables.$purple-bg-dark
+    variables.$blue-bg-veryDark,
+    variables.$blue-bg-dark
   );
   height: 100vh;
   line-height: 1;
 }
 
 a {
-  color: variables.$text-color;
-  text-decoration: none;
+  color: variables.$text-color !important;
+  text-decoration: none !important;
 }
 
 h1,
