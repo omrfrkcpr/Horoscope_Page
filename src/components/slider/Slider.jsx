@@ -40,7 +40,7 @@ const Slider = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img src={img3} alt="" className="sliderImg" />
-        <Carousel.Caption className="text-black bg-info bg-opacity-75 fw-bold fs-4 p-1">
+        <Carousel.Caption className="text-black slider3 fw-bold fs-4 p-1">
           <h3 className="fs-2">Tarot</h3>
           <p>
             Tarot cards are an age-old method of predicting the future with the

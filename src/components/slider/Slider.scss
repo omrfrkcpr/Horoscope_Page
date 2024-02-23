@@ -1,5 +1,11 @@
+@use "../../scss/abstracts/variables";
+
 .sliderImg {
   width: 100%;
   object-fit: cover;
   height: 600px;
+}
+
+.slider3 {
+  background-color: variables.$blue-bg-light-opacity;
 }

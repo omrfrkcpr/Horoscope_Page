@@ -2,10 +2,11 @@ import "./App.scss";
 import React from "react";
 import Navbar from "./components/navbar/Navbar";
 import Header from "./components/header/Header";
-import Card from "./components/main/Card";
 import Footer from "./components/footer/Footer";
 import Slider from "./components/slider/Slider";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Main from "./components/main/Main";
+import { data } from "../src/helper/data";
 
 const App = () => {
   //? it should return only one div. But inside it it can be lots of divs !
@@ -14,7 +15,7 @@ const App = () => {
       <Navbar />
       <Slider />
       <Header />
-      <Card />
+      <Main dataChild={data} />
       <Footer />
     </div>
   );

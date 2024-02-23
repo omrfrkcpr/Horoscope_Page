@@ -1,0 +1,104 @@
+@use "../../scss/abstracts/variables";
+
+.divMain {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding-bottom: 5rem;
+  align-items: center;
+
+  p {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  .cards {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    width: 500px;
+
+    &:hover .card-over {
+      transform: translateY(0%);
+    }
+
+    &:hover img {
+      opacity: 5;
+    }
+
+    .title {
+      background-color: variables.$blue-bg-light-opacity;
+      color: variables.$blue-bg-midDark !important;
+      font-size: 1rem;
+      border-radius: 15px;
+      position: absolute;
+      padding: 0 10px;
+      top: 0;
+      left: 0;
+      z-index: 2;
+
+      h1 {
+        font-size: 1.5rem;
+        color: variables.$blue-bg-midDark !important;
+      }
+    }
+
+    .date {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 320px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      border-radius: 8px;
+      font-size: 0.1rem;
+      background-color: variables.$blue-bg-light-opacity;
+      color: variables.$blue-bg-midDark;
+      padding: 0.6rem;
+      z-index: 1;
+
+      h1 {
+        font-size: 1.2rem;
+      }
+    }
+    img {
+      width: 500px;
+      height: 350px;
+
+      object-fit: cover;
+      opacity: 0.5;
+      border-radius: 15px;
+    }
+    .card-over {
+      width: 500px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(100%);
+      transition: transform 0.7s ease-in-out;
+      z-index: 3;
+      background-color: variables.$blue-bg-light-opacity;
+      color: whitesmoke;
+      border-radius: 15px;
+
+      text-align: justify;
+      font-size: 3rem;
+      max-height: 75%;
+
+      //sığmayan yazılar için otomatik scrolling olsun ama scrollbar gözükmesin
+      overflow: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      p {
+        color: black;
+        font-size: 1.4rem;
+        font-family: "Almendra Display", serif;
+      }
+    }
+  }
+}

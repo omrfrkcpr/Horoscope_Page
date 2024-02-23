@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import "./Main.scss";
+import Card from "./Card";
 
-const Main = () => {
+const Main = ({ dataChild }) => {
   return (
-    <div>Main</div>
-  )
-}
+    <div className="divMain mt-5">
+      {dataChild.map(({ id, title, date, desc, image }) => {
+        return <Card item={{ title, date, desc, image }} key={id} />;
+      })}
+    </div>
+  );
+};
 
-export default Main
+export default Main;
