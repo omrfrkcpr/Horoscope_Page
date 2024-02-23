@@ -6,26 +6,38 @@
     variables.$blue-bg-dark
   );
   box-shadow: 2px 2px 30px variables.$blue-bg-light;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 
   &--left img {
     box-shadow: 1px 1px 40px variables.$box-shadow-color;
     border-radius: 50%;
     padding: 0.3rem;
     animation: rotateAnimation 20s infinite linear;
+    margin-left: 1.5rem;
 
     &:hover {
       transform: scale(1.1);
     }
   }
 
-  &--right li a {
-    padding: 0.5rem;
-    border-radius: 10px;
+  &--right {
+    ul {
+      display: flex;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      li a {
+        padding: 0.5rem;
+        border-radius: 10px;
 
-    &:hover {
-      color: variables.$blue-bg-veryDark !important;
-      background-color: variables.$blue-bg-light;
-      transition-duration: 0.5s;
+        &:hover {
+          color: variables.$blue-bg-veryDark !important;
+          background-color: variables.$blue-bg-light;
+          transition-duration: 0.5s;
+        }
+      }
     }
   }
 }
@@ -38,3 +50,47 @@
     transform: rotate(360deg); /* Bitiş açısı (bir tam tur dönme) */
   }
 }
+
+@media (max-width: 800px) {
+  .nav--right {
+    position: relative; /* Ana öğenin konumu belirlenir */
+  }
+
+  .nav--right ul {
+    display: none; /* Varsayılan olarak menüyü gizle */
+    position: absolute; /* Konumlandırma için mutlak pozisyon */
+    top: 20px; /* Ana öğenin altında konumlandır */
+    right: -260px; /* Ana öğenin sağ kenarına hizala */
+    margin-right: 100px;
+    z-index: 999; /* Diğer öğelerin üzerinde görünmesini sağla */
+    background-color: rgba(0, 0, 0, 0.911); /* Arka plan rengi */
+    padding: 10px; /* İçeriği kenarlardan uzaklaştır */
+    height: 200px;
+    width: 150px;
+    color: black !important;
+    line-height: 2.8rem;
+    text-align: center;
+
+    li {
+      border-bottom: 1px solid white;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .nav--right ul.show {
+    display: inline-block; /* Show sınıfı eklenirse menüyü göster */
+  }
+}
+
+@media (min-width: 800px) {
+  .nav--toggle {
+    display: none;
+  }
+}
+
+//! TODO;
+// @media (max-width: 800px) {
+// }
