@@ -43,6 +43,8 @@ Project aims to create a horoscope website that shows general information and in
 
 ## Expected Outcome
 
+![project-outcome](https://github.com/omrfrkcpr/Horoscope_Page/assets/77440899/fdf0d1f0-8f07-489c-9ead-4a99eb1f6343)
+
 ## Objective
 
 Build a Horoscope Page using ReactJS and SCSS.
