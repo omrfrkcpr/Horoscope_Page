@@ -1,0 +1,10 @@
+.module {
+  position: fixed;
+  z-index: 999999;
+  height: 50%;
+  width: 80%;
+  background-color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
