@@ -1,0 +1,32 @@
+//*abstract
+@use "././scss/abstracts/mixins";
+@use "././scss/abstracts/variables";
+//*base
+@use "././scss/base/reset";
+//*components
+@use "././scss/components/responsive";
+
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  font-family: variables.$ff-rubik;
+  color: variables.$text-color;
+  background-image: linear-gradient(
+    to top,
+    variables.$purple-bg-veryDark,
+    variables.$purple-bg-dark
+  );
+  height: 100vh;
+  line-height: 1;
+}
+
+a {
+  color: variables.$text-color;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}

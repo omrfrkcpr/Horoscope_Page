@@ -1,0 +1,18 @@
+@use "../../scss/abstracts/variables";
+
+.nav {
+  background-image: linear-gradient(
+    variables.$purple-bg-light,
+    variables.$purple-bg-dark
+  );
+  box-shadow: 2px 2px 30px variables.$purple-bg-light;
+
+  &--right li a {
+    padding: 0.5rem;
+
+    &:hover {
+      color: variables.$purple-bg-veryDark;
+      background-color: variables.$purple-bg-light;
+    }
+  }
+}
