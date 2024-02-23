@@ -1,6 +1,6 @@
 @use "../../scss/abstracts/variables";
 
-.title h1 {
+.header h1 {
   color: variables.$blue-bg-light;
   margin-top: 2rem;
   animation: heartbeat 2s infinite ease-in-out;

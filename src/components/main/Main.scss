@@ -8,11 +8,6 @@
   padding-bottom: 5rem;
   align-items: center;
 
-  p {
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 1rem;
-  }
   .cards {
     position: relative;
     height: 350px;
@@ -28,8 +23,8 @@
     }
 
     .title {
-      background-color: variables.$blue-bg-light-opacity;
-      color: variables.$blue-bg-midDark !important;
+      // background-color: variables.$blue-bg-light-opacity;
+      color: variables.$blue-bg-light !important;
       font-size: 1rem;
       border-radius: 15px;
       position: absolute;
@@ -40,31 +35,15 @@
 
       h1 {
         font-size: 1.5rem;
-        color: variables.$blue-bg-midDark !important;
+        color: variables.$blue-bg-light !important;
+        margin-right: 0.5rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
       }
     }
 
-    .date {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      width: 320px;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: baseline;
-      border-radius: 8px;
-      font-size: 0.1rem;
-      background-color: variables.$blue-bg-light-opacity;
-      color: variables.$blue-bg-midDark;
-      padding: 0.6rem;
-      z-index: 1;
-
-      h1 {
-        font-size: 1.2rem;
-      }
-    }
     img {
       width: 500px;
       height: 350px;
@@ -84,7 +63,7 @@
       background-color: variables.$blue-bg-light-opacity;
       color: whitesmoke;
       border-radius: 15px;
-
+      padding: 1rem;
       text-align: justify;
       font-size: 3rem;
       max-height: 75%;

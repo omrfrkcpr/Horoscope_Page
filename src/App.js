@@ -2,7 +2,6 @@ import "./App.scss";
 import React from "react";
 import Navbar from "./components/navbar/Navbar";
 import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
 import Slider from "./components/slider/Slider";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Main from "./components/main/Main";
@@ -17,8 +16,7 @@ const App = () => {
       <Slider />
       <Header />
       <Main dataChild={data} />
-      <Module />
-      <Footer />
+      <Module dataChild={data} />
     </div>
   );
 };

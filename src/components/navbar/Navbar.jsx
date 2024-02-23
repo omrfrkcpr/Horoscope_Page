@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="nav--right">
         <ul className="pages list-unstyled d-flex fs-4 mt-3">
           <li className="me-3">
-            <a href="#body">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li className="me-3">
             <a href="#tarot">Tarot</a>

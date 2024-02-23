@@ -6,7 +6,7 @@ const Main = ({ dataChild }) => {
   return (
     <div className="divMain mt-5">
       {dataChild.map(({ id, title, date, desc, image }) => {
-        return <Card item={{ title, date, desc, image }} key={id} />;
+        return <Card item={{ id, title, date, desc, image }} key={id} />;
       })}
     </div>
   );
