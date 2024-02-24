@@ -6,7 +6,6 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
-  const [menuOpacity, setMenuOpacity] = useState(0); // Opaklık durumu
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -24,20 +23,15 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    // Body'ye tıklama olayını dinle
-    document.body.addEventListener("click", handleOutsideClick);
+    // Ekran boyutu 800 pikselden küçükse ve menü açıksa, body'ye tıklama olayını dinle
+    if (window.innerWidth <= 800 && showMenu) {
+      document.body.addEventListener("click", handleOutsideClick);
+    }
 
     // Cleanup: Component kaldırıldığında event listener'ı temizle
     return () => {
       document.body.removeEventListener("click", handleOutsideClick);
     };
-  }, [showMenu]);
-
-  useEffect(() => {
-    // Opaklık durumunu güncelle
-    if (window.innerWidth <= 800) {
-      setMenuOpacity(showMenu ? 1 : 0);
-    }
   }, [showMenu]);
 
   return (
@@ -49,10 +43,7 @@ const Navbar = () => {
         <h1>Horoscope</h1>
       </div>
       <div className="nav--right" ref={menuRef}>
-        <ul
-          className={`pages list-unstyled ${showMenu ? "show" : ""}`}
-          style={{ opacity: menuOpacity, transition: "opacity 0.5s" }}
-        >
+        <ul className={`pages list-unstyled ${showMenu ? "show" : ""}`}>
           <li className="me-1">
             <a href="#home" className="w-100">
               Home
