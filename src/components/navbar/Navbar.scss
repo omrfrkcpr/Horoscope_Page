@@ -26,7 +26,7 @@
   &--right {
     ul {
       display: flex;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       margin-top: 1rem;
       li a {
         padding: 0.5rem;
@@ -60,8 +60,8 @@
     display: none; /* Varsayılan olarak menüyü gizle */
     position: absolute; /* Konumlandırma için mutlak pozisyon */
     top: 20px; /* Ana öğenin altında konumlandır */
-    right: -260px; /* Ana öğenin sağ kenarına hizala */
-    margin-right: 100px;
+    right: -170px; /* Sayfanın sağ kenarına hizala */
+    // margin-right: 10%; /* Sağdan boşluk bırak */
     z-index: 999; /* Diğer öğelerin üzerinde görünmesini sağla */
     background-color: rgba(0, 0, 0, 0.911); /* Arka plan rengi */
     padding: 10px; /* İçeriği kenarlardan uzaklaştır */
@@ -70,14 +70,6 @@
     color: black !important;
     line-height: 2.8rem;
     text-align: center;
-
-    li {
-      border-bottom: 1px solid white;
-
-      &:last-child {
-        border-bottom: none;
-      }
-    }
   }
 
   .nav--right ul.show {
@@ -90,7 +82,3 @@
     display: none;
   }
 }
-
-//! TODO;
-// @media (max-width: 800px) {
-// }
