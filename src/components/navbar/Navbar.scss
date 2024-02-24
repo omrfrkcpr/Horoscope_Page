@@ -55,13 +55,25 @@
   }
 }
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 400px) {
+  .nav {
+    &--middle h1 {
+      font-size: 1.5rem;
+    }
+
+    &--toggle button {
+      padding: 0.2rem 0.4rem 0.2rem 0.3rem !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
   .nav--right ul {
     font-size: 1rem;
   }
 }
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .nav {
     &--left img {
       width: 70px !important;
@@ -78,7 +90,7 @@
         display: none; /* Varsayılan olarak menüyü gizle */
         position: absolute; /* Konumlandırma için mutlak pozisyon */
         top: 60px; /* Ana öğenin altında konumlandır */
-        right: 30px; /* Sayfanın sağ kenarına hizala */
+        right: 10px; /* Sayfanın sağ kenarına hizala */
         // margin-right: 10%; /* Sağdan boşluk bırak */
         z-index: 999; /* Diğer öğelerin üzerinde görünmesini sağla */
         background-color: rgba(0, 0, 0, 0.911); /* Arka plan rengi */
@@ -100,7 +112,7 @@
   }
 }
 
-@media (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   .nav--toggle {
     display: none;
   }

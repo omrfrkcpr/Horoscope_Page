@@ -7,15 +7,22 @@
 }
 
 .slider2 {
+  height: 50% !important;
+  overflow: auto;
+  margin-bottom: 5rem;
+
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
   p {
-    font-size: 1.3rem !important;
+    font-size: 1.3rem;
     font-family: variables.$ff-almendra;
   }
 }
 
 .slider1 {
   p {
-    font-family: variables.$ff-almendra;
+    font-family: variables.$ff-almendra !important;
   }
 }
 
@@ -32,7 +39,7 @@
     padding-top: 1rem;
   }
   p {
-    font-family: variables.$ff-almendra;
+    font-family: variables.$ff-almendra !important;
     color: rgb(68, 67, 67);
     padding: 1rem;
   }
@@ -41,5 +48,10 @@
 @media only-screen and (max-width: 368px) {
   .slider3 {
     font-size: smaller !important;
+  }
+
+  .slider2 h2,
+  .slider2 p {
+    font-size: 1rem !important;
   }
 }
