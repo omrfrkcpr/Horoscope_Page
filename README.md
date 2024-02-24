@@ -46,7 +46,7 @@ Project aims to create a horoscope website that shows general information and in
 
 ## Expected Outcome
 
-
+![horoscope](https://github.com/omrfrkcpr/Horoscope_Page/assets/77440899/033e0034-a42e-4b52-993d-1cd661738eca)
 
 ## Objective
 
