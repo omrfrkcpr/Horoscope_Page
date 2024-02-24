@@ -50,7 +50,12 @@
 @media (max-width: 800px) {
   .nav {
     &--left img {
-      width: 100px !important;
+      width: 70px !important;
+      padding: 0.5rem !important;
+    }
+
+    &--middle h1 {
+      margin-left: 5rem;
     }
 
     &--right {
@@ -58,7 +63,7 @@
       ul {
         display: none; /* Varsayılan olarak menüyü gizle */
         position: absolute; /* Konumlandırma için mutlak pozisyon */
-        top: 110px; /* Ana öğenin altında konumlandır */
+        top: 60px; /* Ana öğenin altında konumlandır */
         right: 30px; /* Sayfanın sağ kenarına hizala */
         // margin-right: 10%; /* Sağdan boşluk bırak */
         z-index: 999; /* Diğer öğelerin üzerinde görünmesini sağla */
@@ -73,6 +78,10 @@
           display: inline-block; /* Show sınıfı eklenirse menüyü göster */
         }
       }
+    }
+
+    &--toggle button {
+      font-size: smaller !important;
     }
   }
 }
