@@ -17,10 +17,6 @@
     padding: 0.3rem;
     animation: rotateAnimation 20s infinite linear;
     margin-left: 1.5rem;
-
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 
   &--right {
@@ -52,24 +48,30 @@
 }
 
 @media (max-width: 800px) {
-  .nav--right {
-    // position: relative; /* Ana öğenin konumu belirlenir */
-    ul {
-      display: none; /* Varsayılan olarak menüyü gizle */
-      position: absolute; /* Konumlandırma için mutlak pozisyon */
-      top: 110px; /* Ana öğenin altında konumlandır */
-      right: 30px; /* Sayfanın sağ kenarına hizala */
-      // margin-right: 10%; /* Sağdan boşluk bırak */
-      z-index: 999; /* Diğer öğelerin üzerinde görünmesini sağla */
-      background-color: rgba(0, 0, 0, 0.911); /* Arka plan rengi */
-      padding: 10px; /* İçeriği kenarlardan uzaklaştır */
-      height: 200px;
-      width: 150px;
-      color: black !important;
-      line-height: 2.8rem;
-      text-align: center;
-      &.show {
-        display: inline-block; /* Show sınıfı eklenirse menüyü göster */
+  .nav {
+    &--left img {
+      width: 100px !important;
+    }
+
+    &--right {
+      // position: relative; /* Ana öğenin konumu belirlenir */
+      ul {
+        display: none; /* Varsayılan olarak menüyü gizle */
+        position: absolute; /* Konumlandırma için mutlak pozisyon */
+        top: 110px; /* Ana öğenin altında konumlandır */
+        right: 30px; /* Sayfanın sağ kenarına hizala */
+        // margin-right: 10%; /* Sağdan boşluk bırak */
+        z-index: 999; /* Diğer öğelerin üzerinde görünmesini sağla */
+        background-color: rgba(0, 0, 0, 0.911); /* Arka plan rengi */
+        padding: 10px; /* İçeriği kenarlardan uzaklaştır */
+        height: 200px;
+        width: 150px;
+        color: black !important;
+        line-height: 2.8rem;
+        text-align: center;
+        &.show {
+          display: inline-block; /* Show sınıfı eklenirse menüyü göster */
+        }
       }
     }
   }
