@@ -6,6 +6,7 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
+  const [menuOpacity, setMenuOpacity] = useState(0); // Opaklık durumu
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -32,6 +33,11 @@ const Navbar = () => {
     };
   }, [showMenu]);
 
+  useEffect(() => {
+    // Opaklık durumunu güncelle
+    setMenuOpacity(showMenu ? 1 : 0);
+  }, [showMenu]);
+
   return (
     <div className="nav">
       <div className="nav--left">
@@ -41,7 +47,10 @@ const Navbar = () => {
         <h1>Horoscope</h1>
       </div>
       <div className="nav--right" ref={menuRef}>
-        <ul className={`pages list-unstyled ${showMenu ? "show" : ""}`}>
+        <ul
+          className={`pages list-unstyled ${showMenu ? "show" : ""}`}
+          style={{ opacity: menuOpacity, transition: "opacity 0.5s" }}
+        >
           <li className="me-1">
             <a href="#home" className="w-100">
               Home
