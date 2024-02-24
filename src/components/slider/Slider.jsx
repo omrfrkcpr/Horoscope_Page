@@ -17,7 +17,7 @@ const Slider = () => {
     <Carousel activeIndex={index} onSelect={handleSelect} className="mt-4">
       <Carousel.Item>
         <img src={img1} alt="" className="sliderImg" />
-        <Carousel.Caption>
+        <Carousel.Caption className="slider1">
           <h3 className="display-1">Your Spiritual Home</h3>
           <p className="fs-3">
             Welcome at the Horoscope website. We are here to reveal the
@@ -27,7 +27,7 @@ const Slider = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img src={img2} alt="" className="sliderImg" />
-        <Carousel.Caption>
+        <Carousel.Caption className="slider2">
           <h3 className="display-3">Let Us Guide You In The Spiritual World</h3>
           <p className="fs-3">
             Are you looking for a place to explore your spiritual side and
@@ -40,7 +40,7 @@ const Slider = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img src={img3} alt="" className="sliderImg" />
-        <Carousel.Caption className="text-black slider3 fw-bold fs-4 p-1">
+        <Carousel.Caption className="text-black slider3 fs-4 p-1">
           <h3 className="fs-2">Tarot</h3>
           <p>
             Tarot cards are an age-old method of predicting the future with the
@@ -48,7 +48,7 @@ const Slider = () => {
             symbol that represents the future. A psychic or a person with
             knowledge of tarot cards can uncover the meaning of these cards. The
             present-day tarot cards’ meanings were interpreted by Etteilla and
-            Marie-Anne Adelaide Lenormand.{" "}
+            Marie-Anne Adelaide Lenormand.
           </p>
         </Carousel.Caption>
       </Carousel.Item>

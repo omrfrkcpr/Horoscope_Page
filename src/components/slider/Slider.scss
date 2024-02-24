@@ -6,6 +6,40 @@
   height: 600px;
 }
 
+.slider2 {
+  p {
+    font-size: 1.3rem !important;
+    font-family: variables.$ff-rubik;
+  }
+}
+
+.slider1 {
+  p {
+    font-family: variables.$ff-rubik;
+  }
+}
+
 .slider3 {
-  background-color: variables.$blue-bg-light-opacity;
+  background-color: rgba(220, 220, 220, 0.904);
+  height: 50%;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  h3 {
+    padding-top: 1rem;
+  }
+  p {
+    font-family: variables.$ff-rubik;
+    color: gray;
+    padding: 1rem;
+  }
+}
+
+@media only-screen and (max-width: 368px) {
+  .slider3 {
+    font-size: smaller !important;
+  }
 }
