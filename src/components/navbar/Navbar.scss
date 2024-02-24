@@ -30,7 +30,7 @@
   &--right {
     ul {
       display: flex;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-top: 1rem;
       li a {
         padding: 0.3rem;
@@ -52,6 +52,12 @@
   }
   to {
     transform: rotate(360deg); /* Bitiş açısı (bir tam tur dönme) */
+  }
+}
+
+@media (max-width: 992px) {
+  .nav--right ul {
+    font-size: 1rem;
   }
 }
 
@@ -93,6 +99,7 @@
     }
   }
 }
+
 @media (min-width: 800px) {
   .nav--toggle {
     display: none;
