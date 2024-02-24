@@ -35,6 +35,7 @@ Project aims to create a horoscope website that shows general information and in
 │    └── index.js
 │
 ├── .gitignore
+├── horoscope.gif
 ├── LICENSE
 ├── package-lock.json
 ├── package.json
