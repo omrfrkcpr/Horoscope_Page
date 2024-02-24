@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import logo from "../../assets/general/logo.png";
 import "../navbar/Navbar.scss";
 
@@ -11,16 +11,19 @@ const Navbar = () => {
     setShowMenu(!showMenu);
   };
 
-  const handleOutsideClick = (event) => {
-    // Menü açıkken ve tıklanan öğe menü dışında ve buton dışında ise menüyü kapat
-    if (
-      showMenu &&
-      !menuRef.current.contains(event.target) &&
-      !buttonRef.current.contains(event.target)
-    ) {
-      setShowMenu(false);
-    }
-  };
+  const handleOutsideClick = useCallback(
+    (event) => {
+      // Menü açıkken ve tıklanan öğe menü dışında ve buton dışında ise menüyü kapat
+      if (
+        showMenu &&
+        !menuRef.current.contains(event.target) &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setShowMenu(false);
+      }
+    },
+    [showMenu, menuRef, buttonRef]
+  );
 
   useEffect(() => {
     // Ekran boyutu 800 pikselden küçükse ve menü açıksa, body'ye tıklama olayını dinle
@@ -32,7 +35,7 @@ const Navbar = () => {
     return () => {
       document.body.removeEventListener("click", handleOutsideClick);
     };
-  }, [showMenu]);
+  }, [showMenu, handleOutsideClick]);
 
   return (
     <div className="nav">
