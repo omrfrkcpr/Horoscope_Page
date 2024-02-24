@@ -35,7 +35,9 @@ const Navbar = () => {
 
   useEffect(() => {
     // Opaklık durumunu güncelle
-    setMenuOpacity(showMenu ? 1 : 0);
+    if (window.innerWidth <= 800) {
+      setMenuOpacity(showMenu ? 1 : 0);
+    }
   }, [showMenu]);
 
   return (
