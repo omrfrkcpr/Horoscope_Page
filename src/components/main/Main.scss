@@ -74,9 +74,26 @@
         display: none;
       }
       p {
-        color: black;
-        font-size: 1.4rem;
-        font-family: "Almendra Display", serif;
+        color: rgba(0, 0, 0, 0.689);
+        font-size: 1.2rem;
+        font-family: variables.$ff-almendra !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 564px) {
+  .divMain {
+    .title {
+      h1,
+      h2 {
+        font-size: 1rem !important;
+      }
+    }
+
+    .card-over {
+      p {
+        font-size: 1rem !important;
       }
     }
   }
