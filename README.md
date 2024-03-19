@@ -6,6 +6,10 @@ https://webpage-horoscope.netlify.app/
 
 Project aims to create a horoscope website that shows general information and interpretations of zodiac signs.
 
+## Outcome
+
+![horoscope](https://github.com/omrfrkcpr/Horoscope_Page/assets/77440899/033e0034-a42e-4b52-993d-1cd661738eca)
+
 ## Project Skeleton
 
 ```
@@ -43,10 +47,6 @@ Project aims to create a horoscope website that shows general information and in
 ├── package.json
 └── README.md
 ```
-
-## Expected Outcome
-
-![horoscope](https://github.com/omrfrkcpr/Horoscope_Page/assets/77440899/033e0034-a42e-4b52-993d-1cd661738eca)
 
 ## Objective
 
